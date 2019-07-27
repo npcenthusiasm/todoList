@@ -53,36 +53,101 @@ body{
     background-image: url('bg3.jpg');
     font-family: "Microsoft JhengHei";
 }
-h1{
-    color:b;
+
+button{
+    border: 0;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: "Microsoft JhengHei";
+}
+
+.addBtn{
+    background-color: rgba(59, 248, 68,0.5);
+}
+
+.addBtn:hover{
+    background-color: rgba(59, 248, 68,1);
+    color: white;
+}
+
+.deleteAllBtn{
+    background-color: rgba(248, 45, 45,0.5);
+}
+
+.deleteAllBtn:hover{
+    background-color: rgba(248, 45, 45,1);
+    color: white;
+}
+
+.recoverBtn{
+    background-color: rgba(221, 31, 196, 0.5);
+}
+.recoverBtn:hover{
+    background-color: rgba(221, 31, 196, 1);
+    color: white;
+}
+
+.item{
+    margin: auto;
+    max-width: 450px;
+}
+
+.item h1{
+    margin: 20px 0;
+    color:black;
     text-align: center;
     font-size: 30px;
 }
-.item{
-   
-}
-input[type=text]{
-  height: 30px;
-  margin: auto;
-  display:inline-block;
-  left: 50%;
-}
 
-button{
-    height: 30px;
-    display:inline-block;
-    left: 50%;
-}
-ul{
-    max-width: 200px;
-    padding: 20px;
-    background-color: crimson;
-    margin: auto;
-   
-}
-li{
-
-    width: 100%;
+.inputText{
+    background-color: rgba(31, 34, 33, 0.253);
+    padding: 4px 4px;
+    margin: 0 8px;
+    width: 200px;
+    border: 0;
+    border-radius: 10px;
     font-size: 20px;
-    background-color: rgb(88, 187, 166);
+    font-family: "Microsoft JhengHei";
+    color: rgb(32, 30, 30);
+}
+  
+.todoList {
+    margin: 20px 0;
+    padding: 10px;
+    /*min-height: 60px;*/
+    background-color: rgba(119, 175, 240, 0.7);  
+    border-radius: 10px;
+}
+
+.todoList li{
+    position: relative;
+    margin: 4px 0;
+    padding:8px;
+    width: 95%;
+    font-size: 20px;
+    background-color: rgba(236, 236, 236, 0.7);
+    /*background-color: rgba(245, 208, 45,0.3);*/
+    border-radius: 10px;
+}
+.todoList li input{
+    background-color: rgba(31, 34, 32, 0.25);
+    padding: 4px 4px;
+    width: 200px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: "Microsoft JhengHei";
+    color: rgb(32, 30, 30);
+    
+}
+
+.todoList li .deleteBtn{ 
+    position: absolute;
+    right: 10px;
+    background-color: rgba(245, 208, 45,0.5);  
+}
+
+.todoList li .deleteBtn:hover{
+    background-color: rgba(245, 208, 45,1);
 }
