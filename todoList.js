@@ -11,13 +11,21 @@ todoList.addEventListener('click',deleteAndEdit);
 addBtn.addEventListener('click',addData);
 deleteAllBtn.addEventListener('click',deleteAll);
 recoverBtn.addEventListener('click',recover)
+inputText.addEventListener('keypress',keyboardIn);
+
 
 updateView(dataList);
 
-//editText.addEventListener('blur',edit);
+function keyboardIn(e){
+    console.log(e);
+    if(e.code === 'Enter' ||e.code === 'NumpadEnter'){
+        addData();
+    }
+}
+
 //新增一筆紀錄
 function addData(){
-    if(inputText.value != ''){
+    if((inputText.value).trim() != ''){
         dataList.push(inputText.value);
         inputText.value = '';
         updateView(dataList);
@@ -30,9 +38,8 @@ function updateView(dataList){
     var str='';
     for(var i=0 ; i<dataList.length;i++)
     {
-        str +='<li><input data-num='+i+' type="text" value='+dataList[i]+'><button data-num='+i+' class="deleteBtn">刪除</button></li>';    
+        str +='<li><input data-num='+i+' type="text" value='+dataList[i]+'><button data-num='+i+' class="deleteBtn"><i class="fas fa-eraser"></i></button></li>';    
     }
-    console.log(dataList);
     todoList.innerHTML=str;
     saveLocalStroage(dataList);
 }
@@ -59,7 +66,7 @@ function deleteAll(){
 
 //刪除 or 編輯一筆紀錄
 function deleteAndEdit(e){
-    if(e.target.nodeName=='BUTTON'){
+    if(e.target.nodeName=='BUTTON' ||e.target.nodeName=='I'){
         var  num= e.target.dataset.num;
         var deleteData =dataList.splice(num,1);//刪除資料，並把刪掉的資料存起來
         recoverData = recoverData.concat(deleteData);//合併array
@@ -89,5 +96,4 @@ function recover(){
     dataList.push(lastData);
     saveLocalStroage(dataList);
     updateView(dataList);
-    
 }

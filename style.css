@@ -50,7 +50,7 @@ table {
 
 /*----------------------*/
 body{
-    background-image: url('bg3.jpg');
+    background-image: url('https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
     font-family: "Microsoft JhengHei";
 }
 
@@ -58,33 +58,29 @@ button{
     border: 0;
     height: 30px;
     border-radius: 10px;
+    border:1px solid #2e4646;
     font-size: 20px;
+    background-color: #e3e5c6;
+    color: #2e4646;
     font-family: "Microsoft JhengHei";
 }
 
 .addBtn{
-    background-color: rgba(59, 248, 68,0.5);
+    background-color: #e3e5c6;
 }
 
 .addBtn:hover{
-    background-color: rgba(59, 248, 68,1);
+    background-color: #388f5f;
     color: white;
-}
-
-.deleteAllBtn{
-    background-color: rgba(248, 45, 45,0.5);
 }
 
 .deleteAllBtn:hover{
-    background-color: rgba(248, 45, 45,1);
+   background-color: rgba(248, 45, 45,1);
     color: white;
 }
 
-.recoverBtn{
-    background-color: rgba(221, 31, 196, 0.5);
-}
 .recoverBtn:hover{
-    background-color: rgba(221, 31, 196, 1);
+    background-color: rgb(221, 107, 31);
     color: white;
 }
 
@@ -95,7 +91,7 @@ button{
 
 .item h1{
     margin: 20px 0;
-    color:black;
+    color: white;
     text-align: center;
     font-size: 30px;
 }
@@ -105,18 +101,17 @@ button{
     padding: 4px 4px;
     margin: 0 8px;
     width: 200px;
-    border: 0;
+    border: 1px solid white;
     border-radius: 10px;
     font-size: 20px;
     font-family: "Microsoft JhengHei";
-    color: rgb(32, 30, 30);
+    color: white;
 }
   
 .todoList {
     margin: 20px 0;
-    padding: 10px;
-    /*min-height: 60px;*/
-    background-color: rgba(119, 175, 240, 0.7);  
+    padding: 10px;   
+    background-color: #5f5348a9;
     border-radius: 10px;
 }
 
@@ -126,28 +121,28 @@ button{
     padding:8px;
     width: 95%;
     font-size: 20px;
-    background-color: rgba(236, 236, 236, 0.7);
-    /*background-color: rgba(245, 208, 45,0.3);*/
+    background-color: #c8be9f;
     border-radius: 10px;
 }
+
 .todoList li input{
-    background-color: rgba(31, 34, 32, 0.25);
+    background-color: #e3e5c6;
     padding: 4px 4px;
-    width: 200px;
+    width: 300px;
     border: 0;
     border-radius: 10px;
     font-size: 20px;
     font-family: "Microsoft JhengHei";
-    color: rgb(32, 30, 30);
+    color: #2e4646;
     
 }
 
 .todoList li .deleteBtn{ 
     position: absolute;
     right: 10px;
-    background-color: rgba(245, 208, 45,0.5);  
 }
 
 .todoList li .deleteBtn:hover{
-    background-color: rgba(245, 208, 45,1);
+    background-color: black;
+    color: white;
 }
